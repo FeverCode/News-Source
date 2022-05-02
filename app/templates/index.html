@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macros %%}
+
+{% block content %}
+<div class="container">
+    <!--Business News Sources-->
+    <h3> Trending Business News Sources</h3>
+    <hr>
+    {{macro.displaySourceList(sources)}}
+
+    <!--Trending Technology News Sources-->
+    <hr>
+    {{macro.displaySourceList(technology_sources)}}
+
+    <!--Trending Entertainment Sources-->
+    <hr>
+    {{macro.displaySourceList(entertaintment_sources)}}
+
+    <!--Trending Sports News Sources-->
+    <hr>
+    {{macro.displaySourceList(sports_sources)}}
+    
+</div>
+
+{% endblock %}
 
 
-    { % for source_row in source_list |batch(4) % }
-        <div class="row">
-            
-    {% endfor %}        
-{% endmacro %}}
