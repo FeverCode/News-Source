@@ -18,7 +18,7 @@
 <p>An application for listing and previewing news articles from various sources.</p>
 
 Live link to the project
-[News-Source]()
+[News-Source](https://speed-news.herokuapp.com/)
 
 ## Requirements
 * A computer running on either Windows, MacOS or Ubuntu operating system installed with the following:
