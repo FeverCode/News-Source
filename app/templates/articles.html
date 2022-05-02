@@ -5,16 +5,16 @@
 
     <!--Popular news section-->
         <h3> Top News</h3>
-        {% for article_row in articles |batch(4) %}
+        {% for article_row in articles | batch(4) %}
 
             <div class="row">
-                {% for article in articles_row %}
+                {% for article in article_row %}
                     <div class="col-md-3">
                         <div class="thumbnail">
                         <a href="{{article.url}}" target="_blank">
                             <img src="{{article.image}}" alt="{{article.title}}" class="img-responsive" styles="heigth:30px">
                         </a>
-                            <div class="captions">
+                            <div class="caption">
                                 <h4><a href="{{article.url}}" target=_"blank">{{article.title |truncate(35)}}</a></h4>
                                 <p>{{article.description | truncate(80)}}</p>
                                 <a href="{{article.url}}" target="_blank">Read more</a>

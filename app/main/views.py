@@ -16,12 +16,12 @@ def index():
     
     return render_template('index.html',title=title, sources = sources, sport_sources = sport_sources, technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 
-@main.route('/sources/<int:id>')
+@main.route('/sources/<id>')
 def articles(id):
     '''
     View articles pages
     '''
     articles = get_artcles(id)
-    title= f'NS | {id}'
+    title= f'NH | {id}'
     
     return render_template('articles.html',title=title,articles=articles)
