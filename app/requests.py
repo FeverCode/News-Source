@@ -2,6 +2,7 @@ import urllib.request,json
 from webbrowser import get
 from .models import Sources,Articles
 
+
 #get the api key
 api_key  = None
 
@@ -28,7 +29,10 @@ def get_sources(category):
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
         
+        
         sources_results = None
+        
+        
         
         if get_sources_response['sources']:
             sources_results_list = get_sources_response['sources']
