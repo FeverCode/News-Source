@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+
+    { % for source_row in source_list |batch(4) % }
+        <div class="row">
+            
+    {% endfor %}        
+{% endmacro %}}
